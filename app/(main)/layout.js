@@ -1,7 +1,11 @@
-import React from "react";
+import React from 'react'
 
-const AdminLayout =async() => {
-    return <div>AdminLayout</div>
+const Mainlayout = ({ children }) => {
+  return (  
+    <div className="container mx-auto my-32">
+      {children}
+    </div>
+  )
 }
 
-export default AdminLayout;
+export default Mainlayout

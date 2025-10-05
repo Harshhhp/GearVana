@@ -1,5 +1,6 @@
-"use client";
-
+// "use client";
+import { getFeaturedCars } from "@/actions/home";
+import { serializedCarData } from "@/lib/helper";
 import { Button } from "@/components/ui/button";
 import CarCard from "@/components/ui/CarCard";
 import { bodyTypes, carMakes, featuredCars, faqItems } from "@/lib/data";
@@ -15,7 +16,8 @@ import {
 import { SignedOut } from "@clerk/nextjs";
 import HomeSearch from "@/components/ui/HomeSearch";
 
-export default function Home() {
+export default async function Home() {
+  const featuredCars= await getFeaturedCars()
   return (
     <div className="pt-20 flex flex-col">
       {/* Hero */}
@@ -23,7 +25,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
             <h1 className="text-5xl md:text-8xl mb-4 gradient-title">
-              Find your Dream Car With Gaadi Dekho
+              Find your Dream Car With Gear Vana
             </h1>
             <p className="text-xl text-gray-500 mb-8 max-w-2xl mx-auto">
               Advanced AI Car Search and test drive from thousands of Cars.
@@ -220,3 +222,4 @@ export default function Home() {
     </div>
   );
 }
+

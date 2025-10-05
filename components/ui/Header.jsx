@@ -20,12 +20,12 @@ const Header = async ({ isAdminPage = false }) => {
     <header className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b">
       <nav className="mx-auto px-4 py-2 flex items-center justify-between">
         <Link href={isAdminPage ? '/admin' : '/'}>
-          <Image src="/logo.png" alt="Logo" width={200} height={60} />
+          <Image src="/logo-black.png" alt="Logo" width={200} height={60} />
         </Link>
 
         <div className="flex items-center space-x-4">
           {isAdminPage ? (
-            <Link href="/reservations">
+            <Link href="/">
               <Button className="flex items-center gap-2">
                 <ArrowLeft size={18} />
                 <span>Back To App</span>
