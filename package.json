@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@arcjet/next": "^1.0.0-beta.12",
@@ -49,5 +50,8 @@
     "prisma": "^6.13.0",
     "tailwindcss": "^4",
     "tw-animate-css": "^1.3.5"
+  },
+  "engines": {
+    "node": ">=18.18.0"
   }
 }
