@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import React from 'react'
 import CarList from './_components/car-list'
 import CarsList from './_components/car-list'
